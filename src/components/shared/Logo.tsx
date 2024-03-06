@@ -1,17 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
-
 import { useTheme } from "next-themes";
 
-import logoDark from "../../../public/logo-dark.svg";
-import logoLight from "../../../public/logo-light.svg";
 
 export default function Logo() {
   const { theme } = useTheme();
 
   return (
     <Link href="/">
-      <h1 className="font-bold">The Beyond</h1>
+      <h1 className="font-bold capitalize text-2xl from-red-500 to-amber-500 bg-gradient-to-r bg-clip-text text-transparent">BetBit</h1>
     </Link>
   );
 }

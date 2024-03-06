@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 
@@ -25,17 +24,11 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased overflow-x-hidden flex flex-col",
           opensans.variable
         )}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange>
-          <Header />
+        <Header />
 
-          <main className="flex-1">{children}</main>
+        <main className="flex-1">{children}</main>
 
-          <Footer />
-        </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );

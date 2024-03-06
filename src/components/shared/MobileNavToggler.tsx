@@ -23,7 +23,7 @@ export const MobileNavToggler = () => {
             </Button>
             {/* Mobile Nav  */}
             <nav
-                className={`flex justify-end lg:hidden h-screen w-full dark:bg-red-700 bg-black/90 fixed top-0  ${open ? "right-0" : "-right-[120vw]"
+                className={`flex justify-end lg:hidden h-screen w-full  bg-zinc-900/90 fixed top-0  ${open ? "right-0" : "-right-[120vw]"
                     } z-[9999] transition-all duration-500 ease-out`}
             >
                 <div
@@ -44,10 +44,10 @@ export const MobileNavToggler = () => {
                                         <Link
                                             href={link.href}
                                             className={cn(
-                                                "text-base font-normal text-muted-foreground  transition",
+                                                "text-base font-medium text-zinc-900  transition",
                                                 {
-                                                    "text-bridgeRed": link.href == pathname,
-                                                    "hover:text-foreground": link.href != pathname,
+                                                    "text-red-500": link.href == pathname,
+                                                    "hover:text-amber-500": link.href != pathname,
                                                 }
                                             )}
                                             onClick={handleToggle}
